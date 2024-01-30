@@ -1,5 +1,15 @@
 // Your program should start at this line.
-
+while  (!AtGoal()) 
+{
+    if (Peek()) 
+    {
+        Move();
+    } 
+    else 
+    {
+        Turn();
+    }
+}
 
 #region Basic functions
 // These functions are just her to make your intelisense work. 
