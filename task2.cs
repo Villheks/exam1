@@ -1,11 +1,10 @@
-// Your program should start at this line.
-while  (!AtGoal()) 
+while (!AtGoal()) 
 {
     if (Peek()) 
     {
         Move();
     } 
-    else 
+    else
     {
         Turn();
     }

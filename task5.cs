@@ -1,30 +1,54 @@
-// Your program should start at this line.
-
-
-#region Basic functions
-// These functions are just her to make your intelisense work. 
-// They only have a conceptual function.
-
-void Move()
+while (!AtGoal()) 
 {
-    // Moves the car 1 cell in the direction it is heading. 
+    if (Peek()) 
+    {
+        Move();
+    } 
+    else
+    {
+        Turn();
+        if (!Peek())
+        {
+            TurnAround();
+        }
+    }
+}
+static bool AtGoal()
+{
+    // checking if the car is at the goal
+    
+    return false;
 }
 
-void Turn()
+static bool Peek()
 {
-    // Turns the car 90 deg clockwise.
+    // checking if the next cell is open
+    
+    return true;
 }
 
-bool Peek()
+static void Move()
 {
-    // Returns true if the next cell is open, otherwise false.
-    return true; // Just a placeholder value. 
+    // moving the car 1 space in the current direction
+    
+    Console.WriteLine("Move");
 }
 
-bool AtGoal()
+static void Turn()
 {
-    // Returns true if the current cell is the goal cell.
-    return true; // just a placholder
+    //turning the car 90 degrees clockwise
+    
+    Console.WriteLine("Turn Right");
 }
-
-#endregion
+static void TurnLeft()
+{
+    Turn();
+    Turn();
+    Turn();
+    Console.WriteLine("Turn Left");
+}
+static void TurnAround()
+{
+    Turn();
+    Turn();
+}

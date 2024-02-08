@@ -32,7 +32,7 @@ MoveAndTurn(mediumMove, Turn);
 MoveAndTurn(shortMove, TurnLeft);
 MoveAndTurn(longMove, Turn);
 MoveAndTurn(shortMove, TurnLeft);
-AtGoal = true;
+bool AtGoal = true;
 // Check if at the goal
 if (AtGoal())
 {
