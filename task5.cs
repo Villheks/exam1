@@ -11,8 +11,13 @@ while (!AtGoal())
         {
             TurnAround();
         }
+        else
+        {
+            TurnLeft();
+        }
     }
 }
+
 static bool AtGoal()
 {
     // checking if the car is at the goal
